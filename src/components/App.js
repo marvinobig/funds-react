@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./AddForm";
 
 function App() {
+  const [budget, setBudget] = useState(0);
+  const [expense, setExpense] = useState({});
+
+  function showAddForm() {
+    const addForm = document.getElementById("addForm");
+    addForm.showModal();
+  }
+
+  function closeAddForm() {
+    const addForm = document.getElementById("addForm");
+    addForm.close();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="#" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <h1>FUNDS</h1>
+        <button className="add-form" type="button" onClick={showAddForm}>
+          Add
+        </button>
+      </nav>
+      <Modal closeForm={closeAddForm} />
     </div>
   );
 }
