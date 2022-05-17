@@ -14,3 +14,27 @@ A budgeting app that allows you to keep track of your spending.
 
 ## Live
 [Live App](https://marvinobig.github.io/funds-react/)
+
+## Installation
+
+First download project from Github by going over to the green 'code' button and downloading the zip file. Once downloaded, extract the folder.
+
+Use the package manager npm to install Funds's dependencies.
+
+```terminal
+npm install
+```
+
+## Usage
+
+```terminal
+npm run start
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+MIT
